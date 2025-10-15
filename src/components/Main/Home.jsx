@@ -5,7 +5,7 @@ function Home() {
     <>
       <Header text='Usted pone la plata, nosotros el control.' />
       <a href='/login'>
-        <button>Entrar</button>
+        <button className='form-shape button'>Entrar</button>
       </a>
     </>
   );
