@@ -11,10 +11,7 @@ import RegistrarTweakForm from './components/Onboarding/RegistrarTweakForm';
 function App() {
   return (
     <BrowserRouter>
-      <Routes><div className='small-text'>
-          <p>¿Desististe de crear tu cuenta? <a href='/'>Eliminala inmediatamente</a></p>
-          {/* Esto hay que hacerlo una solicitud a la página */}
-        </div>
+      <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/login' element={<LoginForm />} />
         <Route path='/register' element={<RegistrarForm />} />
