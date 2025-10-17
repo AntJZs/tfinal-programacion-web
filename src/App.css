@@ -1,5 +1,23 @@
+.home {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+}
+
+.column {
+  flex-direction: row;
+}
+
+
+.page {
+  width: 50%;
+  align-self: center;
+}
+
+
 .contents {
-  align-content: stretch;
+  /* align-content: stretch; */
   align-items: center;
   justify-content: center;
   display: flex;
@@ -67,3 +85,4 @@
   text-decoration-line: none;
   width: 50%;
 }
+
