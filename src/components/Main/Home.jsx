@@ -2,12 +2,23 @@ import Header from './Header';
 
 function Home() {
   return (
-    <>
+    <div className='home'>
       <Header text='Usted pone la plata, nosotros el control.' />
-      <a href='/login'>
-        <button className='form-shape button'>Entrar</button>
-      </a>
-    </>
+      <div className='subtitle'>
+        <a href='/login'>
+          <button className='form-shape button'>Entra ya</button>
+        </a>
+        <div className='small-text'>
+          <p>
+            ¿No eres un cliente? <a href='/register'>¡Registrate!</a>
+          </p>
+        </div>
+      </div>
+      <div className='side-image'>
+        {/* Esta va a ser una imágen de la interfaz del banco, que salga
+         del lado derecho, mostrando una vista previa de la app. */}
+      </div>
+    </div>
   );
 }
 export default Home;
