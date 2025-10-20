@@ -28,7 +28,7 @@ function Sidebar() {
             </div>
             <div className="menulist">
                 <div className="menuitem">
-                    <p>Largarse</p>
+                    <p>Salir</p>
                 </div>
                 <br /> {/* Que no digan nada por esto */}
             </div>

@@ -1,3 +1,80 @@
 .content {
-    flex-grow: 1;
+display: flex;
+flex-direction: column;
+flex-grow: 1;
+flex-shrink: 0;
+padding-bottom: 1em;
+padding-left: 2em;
+padding-right: 2em;
+padding-top: 1em
+}
+
+.main-content {
+align-items: center;
+display: flex;
+flex-direction: column;
+flex-grow: 1;
+flex-shrink: 0;
+justify-content: center
+}
+
+.buttonbar {
+column-gap: 10px;
+display: flex;
+row-gap: 10px
+}
+
+.button-fab {
+display: inline-flex;
+align-items: center;
+background-color: rgba(255, 255, 255, 0.3);
+border-radius: 10px;
+border-width: 1px;
+column-gap: 9px;
+padding-bottom: 9px;
+padding-left: 18px;
+padding-right: 18px;
+padding-top: 9px;
+row-gap: 9px
+}
+
+/* For the inner places inside */
+.details {
+column-gap: 6px;
+display: flex;
+flex-direction: column;
+flex-grow: 0;
+flex-shrink: 0;
+row-gap: 6px;
+width: 60%
+}
+
+.account-card {
+border-radius: 16px;
+display: flex;
+flex-direction: column;
+flex-grow: 1;
+flex-shrink: 0;
+flex-wrap: wrap;
+justify-content: space-between;
+padding-bottom: 1em;
+padding-left: 1em;
+padding-right: 1em;
+border: 2px solid rgba(32, 32, 32, 1)
+}
+
+.balance {
+align-items: center;
+display: inline-flex;
+justify-content: space-between
+}
+
+.value {
+font-family: monospace, sans-serif;
+font-size: 2em
+}
+
+.value-small {
+font-family: monospace, sans-serif;
+font-size: 1.5em
 }

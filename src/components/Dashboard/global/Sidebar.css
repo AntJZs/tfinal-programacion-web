@@ -4,7 +4,7 @@
     border-right-style: solid;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-    background-color: #FFFFFFAA;
+    background-color: #FFFFFF44;
     width: 20vw;
 }
 
@@ -32,7 +32,6 @@
 
 .menuitem:hover {
     background-color: var(--blue-6);
-    background
 }
 
 
