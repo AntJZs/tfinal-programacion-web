@@ -16,7 +16,9 @@ function RegistrarTweakForm() {
             <p>¿Desististe de crear tu cuenta? <a href='/'>Eliminala inmediatamente</a></p>
             {/* Esto hay que hacerlo una solicitud a la página */}
           </div>
-            <button className="form-shape button"  type='submit'>Iniciar sesión</button>
+          <a href="/user/dashboard" className='form-shape'>
+            <button className="button"  type='submit'>Iniciar sesión</button>
+          </a>
         </div>
       </div>
     </div>

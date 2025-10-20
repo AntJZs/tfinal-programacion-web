@@ -17,8 +17,9 @@ function PassEnroll() {
           <li>Mínimo 1 letra minúscula</li>
           </ul></div>
           <input className='form-shape'  type='password' id='in-password-bis' placeholder='Repetir contraseña'/>
-
-          <button className="form-shape button"  type='submit'>Verificar</button>
+          <a href="/register/details" className='form-shape'>
+          <button className="button"  type='submit'>Verificar</button>
+          </a>
           </div>
       </div>
     </div>

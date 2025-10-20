@@ -16,7 +16,9 @@ function RegistrarForm() {
           <div className='small-text'>
             <p>Al registrarte, estás almacenando información dentro de nuestra base de datos, la cual no garantizamos su confidencialidad.</p>
           </div>
+          <a href="/enroll" className='form-shape'>
             <button className="form-shape button"  type='submit'>Continuar</button>
+          </a>
         </div>
       </div>
     </div>

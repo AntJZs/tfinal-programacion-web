@@ -14,8 +14,9 @@ function OTPEnroll() {
               <p>Escanea el siguiente código QR con tu aplicación de autenticación y escribe el código generado en el siguiente campo.</p>
           </div>
           <input className='form-shape'  type='password' id='in-auth' placeholder='Código de autenticación'/>
-
-          <button className="form-shape button"  type='submit'>Verificar</button>
+        <a href="/register/details" className="form-shape">
+          <button className="button" type='submit'>Verificar</button>
+        </a>
           </div>
       </div>
     </div>

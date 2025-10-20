@@ -34,12 +34,14 @@ function Sidebar() {
                     </div>
                 </a>
             </div>
+            <a href="/" className="menuitem">
             <div className="menulist">
                 <div className="menuitem">
                     <p>Salir</p>
                 </div>
-                <br /> {/* Que no digan nada por esto */}
             </div>
+            </a>
+                <br /> {/* Que no digan nada por esto */}
         </div>
         </div>
     )

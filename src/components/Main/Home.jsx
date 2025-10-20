@@ -6,8 +6,8 @@ function Home() {
       <div className='page'>
         <Header text='Usted pone la plata, nosotros el control.' />
         <div className='subtitle'>
-          <a href='/login'>
-            <button className='form-shape button'>Entra ya</button>
+          <a href='/login' className='form-shape'>
+            <button className=' button'>Entra ya</button>
           </a>
           <div className='small-text'>
             <p>

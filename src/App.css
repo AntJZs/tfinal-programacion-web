@@ -1,25 +1,46 @@
+:root {
+  --blue-6: #CDEEF3;
+  --blue-5: #9BDFE8;
+  --blue-4: #9CE3ED;
+  --blue-3: #3BC9DB;
+  --blue-2: #5DA4AD;
+  --blue-1: #1D646D;
+
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  color: #242424;
+
+  background-image: url('/src/assets/background.svg');
+  background-attachment: fixed;
+  background-clip: border-box;
+  background-origin: padding-box;
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-repeat: repeat;
+  background-size: cover;
+  background-blend-mode: normal;
+  background-color: transparent;
+  margin: 0;
+}
 
 .home {
   width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
-
 }
 
 
-
 .dashboard {
+  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: row;
 }
 
-
-
 .page {
   width: 50%;
   align-self: center;
-  
 }
 
 
@@ -33,10 +54,13 @@
 }
 
 .form-shape {
+  display: flex;
+  align-items: center;
   height: 30px;
   margin-top: 12px;
   width: 75%;
   flex-direction: column;
+  width: 100%;
 }
 
 .square {
@@ -82,6 +106,7 @@
 }
 
 .button {
+  text-decoration: none;
   background-color: var(--blue-6);
   border-style: none;
   border-bottom-style: solid;

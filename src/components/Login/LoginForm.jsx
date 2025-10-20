@@ -1,5 +1,7 @@
 import Header from '../Main/Header';
 
+
+
 function LoginForm() {
   return (
     <div className="home">
@@ -10,7 +12,9 @@ function LoginForm() {
             <input className='form-shape' type='text' id='in-username' placeholder='Usuario'/>
             <input className='form-shape'  type='password' id='in-pass' 
             placeholder='Contraseña o OTP'/>
-            <button className="form-shape button"  type='submit'>Iniciar sesión</button>
+            <a href="/user/dashboard" className='form-shape'>
+            <button className="button" type='submit'>Iniciar sesión</button>
+            </a>
           <div className='small-text'>
             <p>¿No eres un cliente? <a href='/register'>¡Registrate!</a></p>
           </div>
