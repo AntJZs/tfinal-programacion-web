@@ -18,7 +18,8 @@ function App() {
         <Route path='/login' element={<LoginForm />} />
         <Route path='/register' element={<RegistrarForm />} />
         <Route path='/enroll' element={<PassEnroll />} />
-        <Route path='/test' element={<Dashboard />} />
+        <Route path='/user/dashboard' element={<Dashboard num="0"/>} />
+        <Route path='/user/history' element={<Dashboard num="1" />} />
       </Routes>
     </BrowserRouter>
   );

@@ -5,7 +5,7 @@
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     background-color: #FFFFFF44;
-    width: 20vw;
+    width: 14em
 }
 
 .logo {
@@ -28,6 +28,10 @@
 .menulist {
     display: flex;
     flex-direction: column;
+}
+
+.menuitem {
+    color:initial;
 }
 
 .menuitem:hover {

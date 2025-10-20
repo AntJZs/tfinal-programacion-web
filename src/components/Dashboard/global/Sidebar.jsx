@@ -6,25 +6,33 @@ function Sidebar() {
         <div className='side-bar'>
         {/* Primero se va a realizar con texto, si queda tiempo
             se realizará con íconos */}
-        <p>Fancy Navbar</p>
+        <p>Fancy Sidebar</p>
 
         <div className="logo">
             <img src="/src/assets/icon.svg" className='logo'/>
         </div>
             <div className='menu'>
             <div className="menulist">
-                <div className="menuitem">
-                    <p>Inicio</p>
-                </div>
-                <div className="menuitem">
-                    <p>Transacciones</p>
-                </div>
-                <div className="menuitem">
-                    <p>Préstamos</p>
-                </div>
-                <div className="menuitem">
-                    <p>Estadísticas</p>
-                </div>
+                <a href="/user/dashboard" className="menuitem">
+                    <div className="menuitem">
+                        <p>Inicio</p>
+                    </div>
+                </a>
+                <a href="/user/history" className="menuitem">
+                    <div className="menuitem">
+                        <p>Transacciones</p>
+                    </div>
+                </a>
+                <a href="/user/loans" className="menuitem">
+                    <div className="menuitem">
+                        <p>Préstamos</p>
+                    </div>
+                </a>
+                <a href="/user/stats" className="menuitem">
+                    <div className="menuitem">
+                        <p>Estadísticas</p>
+                    </div>
+                </a>
             </div>
             <div className="menulist">
                 <div className="menuitem">

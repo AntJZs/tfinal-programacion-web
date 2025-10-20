@@ -1,9 +1,10 @@
 import Sidebar from "./global/Sidebar";
 import LastSeen from "./global/LastSeen";
+import BalanceHistory from "./BalanceHistory";
 import './Dashboard.css'
 import Details from "./Details";
 
-function Dashboard() {
+function Dashboard(page) {
 
     return (
         <div className="dashboard column">
@@ -20,12 +21,30 @@ function Dashboard() {
             <div className="main-content">
                 {/* Cambia dependiendo a la interfaz a la que se vaya */}
                 {/* Deuda técnica */}
-                <Details name='Lorem Ipsum dolor' accid='LID123' bal='1200000' outs='60000' debt='0' />
+                {Switcher(page.num)}
             </div>
-                <LastSeen />
+                <LastSeen/>
             </div>
         </div>
     )
+}
+
+function Switcher(page) {
+
+        switch (page) {
+            case '1':
+                    return (
+                <BalanceHistory/>
+                    );
+        
+
+        default:
+            return (
+            <Details name='Lorem Ipsum dolor' accid='LID123' bal='1200000' outs='60000' debt='0' />
+            )
+        }
+    
+
 }
 
 export default Dashboard;
