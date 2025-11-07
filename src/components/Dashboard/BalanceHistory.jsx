@@ -1,6 +1,6 @@
 import './Dashboard.css';
 
-function BalanceHistory() {
+function BalanceHistory(meta) {
   return (
     <>
       <h2>Transferencias</h2>

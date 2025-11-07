@@ -6,8 +6,13 @@ import './Dashboard.css';
 import Details from './Details';
 import Fabs from './global/Fabs';
 import Stats from './Stats';
+import { useLocation } from 'react-router';
+import { useState } from 'react';
 
 function Dashboard(page) {
+  const loc = useLocation();
+  const [ID] = useState(loc.state);
+
   var buttons = [];
   switch (page.num) {
     case '0':
@@ -34,7 +39,7 @@ function Dashboard(page) {
         <div className='main-content'>
           {/* Cambia dependiendo a la interfaz a la que se vaya */}
           {/* Deuda técnica */}
-          {Switcher(page.num)}
+          {Switcher(page.num, ID)}
         </div>
         <LastSeen />
       </div>
@@ -42,16 +47,16 @@ function Dashboard(page) {
   );
 }
 
-function Switcher(page) {
+function Switcher(page, identifier) {
   switch (page) {
     case '1':
-      return <BalanceHistory />;
+      return <BalanceHistory id={identifier} />;
     case '2':
       return <LoanHistory />;
     case '3':
       return <Stats />;
     default:
-      return <Details name='Lorem Ipsum dolor' accid='LID123' bal='1200000' outs='60000' debt='0' />;
+      return <Details id={identifier} />;
   }
 }
 

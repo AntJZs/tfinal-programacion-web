@@ -1,7 +1,5 @@
 import { Additem, Back, Home, Home2, Setting2 } from 'iconsax-reactjs';
 function Fabs(btns) {
-  // TODO: transladar los botones a la interfaz de fabs
-
   const buttons = {
     preferences: [<Setting2 variant='Bulk' />, 'Configuración', '/user/account'],
     new_transfer: [<Additem variant='Bulk' />, 'Nueva Transferencia', '/user/newtransfer'],
