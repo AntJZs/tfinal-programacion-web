@@ -2,11 +2,11 @@ import Header from './Header';
 
 function Home() {
   return (
-    <div className="home">
+    <div className='home'>
       <div className='page'>
         <Header text='Usted pone la plata, nosotros el control.' />
         <div className='subtitle'>
-          <a href='/login' className='form-shape'>
+          <a href='/login' className=''>
             <button className=' button'>Entra ya</button>
           </a>
           <div className='small-text'>

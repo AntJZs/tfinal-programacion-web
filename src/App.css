@@ -56,7 +56,12 @@
   margin-top: 12px;
   width: 75%;
   flex-direction: column;
-  width: 100%;
+  width: 90%;
+}
+
+.form-text {
+  margin-bottom: 0em;
+  width: 80%;
 }
 
 .square {
@@ -78,10 +83,11 @@
   border-radius: 25px;
   border-top-style: none;
   display: flex;
-  width: 80%;
+  width: 60%;
   flex-direction: column;
   padding: 1.5rem;
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+  max-width: 1280px;
 }
 
 .subtitle {
@@ -99,14 +105,23 @@
   box-shadow: 2px 2px 0 0 0 0;
 }
 
+.form-input {
+  height: 30px;
+  width: 40%;
+}
+
+.full {
+  width: 100%;
+}
+
 .button {
-  padding: 4px;
+  padding: 5px;
   width: 50%;
   font-weight: bold;
   border-style: none;
   text-decoration: none;
   color: var(#000);
-  border-bottom-width: 2px;
+  border-bottom-width: 3px;
   border-bottom-style: solid;
   text-decoration-line: none;
   background-color: var(--blue-6);
@@ -132,18 +147,38 @@
   align-content: stretch;
   align-items: start;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
-  height: 700px;
   justify-content: start;
   overflow-x: auto;
   overflow-y: auto;
-  width: 90%;
+  width: 40%;
+}
+
+.heading {
+  margin-bottom: 0em;
 }
 
 .stats-item {
   flex-grow: 1;
   margin: 1em;
+}
+
+.group {
+  align-items: center;
+  column-gap: 6px;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  row-gap: 6px;
+}
+
+.pair {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .modal {
@@ -154,5 +189,5 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 80%;
+  width: 60%;
 }
