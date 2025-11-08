@@ -23,12 +23,12 @@ function LoginForm() {
     })
       .then((res) => res.json())
       .then((meta) => {
-        const ID = meta[0];
-
+        // const ID = meta[0];
+        // console.log(ID);
         if (meta[0] != undefined) {
-          nav('/user/dashboard', {
-            state: ID,
-          });
+          localStorage.setItem('userID', meta[0].ID_Cliente);
+          localStorage.setItem('hash', meta[0].hash);
+          nav('/user/dashboard', {});
         } else {
           alert('Datos incorrectos, intentalo de nuevo');
         }

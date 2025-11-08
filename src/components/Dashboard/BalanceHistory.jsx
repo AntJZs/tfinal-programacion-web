@@ -1,25 +1,49 @@
+import { useState, useEffect } from 'react';
 import './Dashboard.css';
+import CurrFormatter from './global/CurrFormatter';
+import DateFormatter from './global/DateFormatter';
 
-function BalanceHistory(meta) {
+function BalanceHistory() {
+  const hash = localStorage.getItem('hash');
+  const [data, setData] = useState({});
+
+  useEffect(() => {
+    try {
+      fetch('http://localhost:3000/users/balhist', {
+        method: 'get',
+        headers: {
+          Accept: 'application/json',
+          hash: hash,
+        },
+      })
+        .then((res) => res.json())
+        .then((d) => setData(d.user));
+    } catch (err) {
+      console.log(err);
+    }
+  }, [hash]);
+  console.log(data);
   return (
     <>
       <h2>Transferencias</h2>
       <div className='details'>
-        <div className='account-card'>
-          <p>Transferencia a Name</p>
-          <div className='account-card-details'>
-            <p>1 de octubre de 2025 - 9:24 AM</p>
-            <span className='value-small'>- $ 20.000,00</span>
-          </div>
-        </div>
-
-        <div className='account-card'>
-          <p>Retiro de dinero</p>
-          <div className='account-card-details'>
-            <p>1 de octubre de 2025 - 10:20 AM</p>
-            <span className='value-small'>- $ 4.000,00</span>
-          </div>
-        </div>
+        {/* Necesitaba una solución de mostrar algo mientras carga, o si existe. */}
+        {Object.hasOwn(data, length) ? (
+          data
+            .slice()
+            .reverse()
+            .map((el) => (
+              <div className='account-card'>
+                <p>{el.tipo == 0 ? `Transferencia a ${el.nombres} ${el.apellidos}` : 'Transacción'}</p>
+                <div className='account-card-details'>
+                  <p>{DateFormatter.format(Date.parse(el.timestamp))}</p>
+                  <span className='value-small'>{CurrFormatter.format(el.tipo >= 0 ? el.cantidad : -el.cantidad)}</span>
+                </div>
+              </div>
+            ))
+        ) : (
+          <p>No hay ninguna transacción hecha por el momento</p>
+        )}
       </div>
     </>
   );

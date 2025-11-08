@@ -1,8 +1,12 @@
-// import { useNavigate } from 'react-router';
+import { Link } from 'react-router';
 import { ArrangeVertical, ArrangeVerticalSquare, Bank, Home, Home2, Logout, StatusUp } from 'iconsax-reactjs';
 import './Sidebar.css';
 
 function Sidebar() {
+  const exit = () => {
+    localStorage.clear;
+  };
+
   return (
     <div className='side-bar'>
       {/* Primero se va a realizar con texto, si queda tiempo
@@ -14,39 +18,39 @@ function Sidebar() {
       </div>
       <div className='menu'>
         <div className='menulist'>
-          <a href='/user/dashboard' className='menuitem'>
+          <Link to='dashboard' className='menuitem'>
             <div className='menuitem'>
               <Home variant='Bulk' />
               <p>Inicio</p>
             </div>
-          </a>
-          <a href='/user/history' className='menuitem'>
+          </Link>
+          <Link to='history' className='menuitem'>
             <div className='menuitem'>
               <ArrangeVerticalSquare variant='Bulk' />
               <p>Transacciones</p>
             </div>
-          </a>
-          <a href='/user/loans' className='menuitem'>
+          </Link>
+          <Link to='loans' className='menuitem'>
             <div className='menuitem'>
               <Bank variant='Bulk' />
               <p>Préstamos</p>
             </div>
-          </a>
-          <a href='/user/stats' className='menuitem'>
+          </Link>
+          <Link to='stats' className='menuitem'>
             <div className='menuitem'>
               <StatusUp variant='Bulk' />
               <p>Estadísticas</p>
             </div>
-          </a>
+          </Link>
         </div>
-        <a href='/' className='menuitem'>
+        <Link to='/' className='menuitem' onClick={exit}>
           <div className='menulist'>
             <div className='menuitem'>
               <Logout variant='Bulk' />
               <p>Salir</p>
             </div>
           </div>
-        </a>
+        </Link>
       </div>
     </div>
   );

@@ -6,9 +6,8 @@ function Fabs(btns) {
     new_loan: [<Additem variant='Bulk' />, 'Nuevo Préstamo', '/user/newloan'],
     back: [<Back variant='Bulk' />, 'Regresar', '/user/dashboard'],
   };
-
   return btns.items.map((e) => (
-    <a href={buttons[e][2]}>
+    <a href={buttons[e][2]} key={e}>
       <button className='button-fab'>
         {buttons[e][0]}
         <span>{buttons[e][1]}</span>
