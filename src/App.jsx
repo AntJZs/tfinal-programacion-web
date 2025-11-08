@@ -12,6 +12,9 @@ import Details from './components/Dashboard/Details';
 import BalanceHistory from './components/Dashboard/BalanceHistory';
 import LoanHistory from './components/Dashboard/LoanHistory';
 import Stats from './components/Dashboard/Stats';
+import Preferences from './components/Dashboard/actions/Preferences';
+import NewTransferForm from './components/Dashboard/actions/NewTransferForm';
+import NewLoanForm from './components/Dashboard/actions/NewLoanForm';
 
 function App() {
   return (
@@ -28,9 +31,9 @@ function App() {
           <Route path='history' element={<BalanceHistory />} />
           <Route path='loans' element={<LoanHistory />} />
           <Route path='stats' element={<Stats />} />
-          <Route path='account' element={<ActionInterface page='preferences' />} />
-          <Route path='newtransfer' element={<ActionInterface page='newtransfer' />} />
-          <Route path='newloan' element={<ActionInterface page='newloan' />} />
+          <Route path='account' element={<Preferences />} />
+          <Route path='newtransfer' element={<NewTransferForm />} />
+          <Route path='newloan' element={<NewLoanForm />} />
         </Route>
       </Routes>
     </BrowserRouter>

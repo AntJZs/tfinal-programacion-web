@@ -1,6 +1,6 @@
 function NewLoanForm() {
   return (
-    <div className='main-content'>
+    <>
       <h1>Nuevo préstamo</h1>
       <form method='post' className='form modal'>
         <h1>¿Cuánto deseas recibir?</h1>
@@ -16,7 +16,7 @@ function NewLoanForm() {
           Confirmar
         </button>
       </form>
-    </div>
+    </>
   );
 }
 export default NewLoanForm;

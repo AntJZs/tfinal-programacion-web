@@ -17,6 +17,15 @@ function Dashboard() {
     case '/user/loans':
       buttons.push('new_loan');
       break;
+    case '/user/account':
+      buttons.push('back');
+      break;
+    case '/user/newtransfer':
+      buttons.push('back');
+      break;
+    case '/user/newloan':
+      buttons.push('back');
+      break;
     default:
       console.log('No buttons defined.');
       break;

@@ -35,13 +35,15 @@ function Details() {
         <p>Balance total: </p>
         <span className='value-small'>{CurrFormatter.format(data.balance)}</span>
       </div>
-      <div className='account-card'>
-        <p>Gastado este mes: </p>
-        <span className='value-small'>{CurrFormatter.format(data.bal_mes)}</span>
-      </div>
-      <div className='account-card'>
-        <p>Deudas pendientes: </p>
-        <span className='value-small'>{CurrFormatter.format(data.deudas)}</span>
+      <div className='group'>
+        <div className='account-card'>
+          <p>Gastado este mes: </p>
+          <span className='value-small'>{CurrFormatter.format(data.bal_mes)}</span>
+        </div>
+        <div className='account-card'>
+          <p>Deudas pendientes: </p>
+          <span className='value-small'>{CurrFormatter.format(data.deudas)}</span>
+        </div>
       </div>
     </div>
   );
