@@ -145,14 +145,11 @@
 
 .stats {
   align-content: stretch;
-  align-items: start;
+  align-items: stretch;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: start;
-  overflow-x: auto;
-  overflow-y: auto;
-  width: 40%;
 }
 
 .heading {
