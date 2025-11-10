@@ -54,7 +54,7 @@ function LoginForm() {
             type='password'
             id='in-pass'
             placeholder='Contraseña'
-            onMouseLeave={(e) => setPass(e.target.value)}
+            onChange={(e) => setPass(e.target.value)}
           />
           <button className='button' type='submit' onClick={validateUser} to='/user/dashboard'>
             Iniciar sesión

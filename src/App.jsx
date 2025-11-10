@@ -4,7 +4,6 @@ import Home from './components/Main/Home';
 import LoginForm from './components/Login/LoginForm';
 import RegistrarForm from './components/Onboarding/RegistrarForm';
 import PassEnroll from './components/Onboarding/PassEnroll';
-import OTPEnroll from './components/Onboarding/OTPEnroll';
 import RegistrarTweakForm from './components/Onboarding/RegistrarTweakForm';
 import Dashboard from './components/Dashboard/Dashboard';
 import Details from './components/Dashboard/Details';
@@ -23,7 +22,7 @@ function App() {
         <Route path='/login' element={<LoginForm />} />
         <Route path='/register' element={<RegistrarForm />} />
         <Route path='/enroll' element={<PassEnroll />} />
-        <Route path='/enroll-2' element={<OTPEnroll />} />
+        {/* <Route path='/enroll-2' element={<OTPEnroll />} /> */}
         <Route path='/register/details' element={<RegistrarTweakForm />} />
         <Route path='/user' element={<Dashboard />}>
           <Route path='dashboard' element={<Details />} />
