@@ -1,6 +1,4 @@
 import './Dashboard.css';
-import LastSeen from './global/LastSeen';
-import Dashboard from './Dashboard';
 import CurrFormatter from './global/CurrFormatter';
 import { useEffect, useState } from 'react';
 
@@ -26,7 +24,7 @@ function Details() {
   }, [hash]);
   return (
     <div className='details'>
-      <h2>¡Hola! {data.nombres}</h2>
+      <h2>¡Hola {data.nombres}!</h2>
       <div className='balance'>
         <p>Su número de cuenta: </p>
         <span className='value'>{data.Codigo_cuenta}</span>

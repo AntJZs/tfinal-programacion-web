@@ -42,8 +42,8 @@ function PassEnroll() {
             className='form-shape'
             type='password'
             onChange={(e) => {
-              setPass_a(e.target.value);
               verifyConstraints();
+              setPass_a(e.target.value);
             }}
             id='in-password'
             placeholder='Contraseña'

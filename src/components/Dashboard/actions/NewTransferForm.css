@@ -38,7 +38,8 @@
 .option:hover {
   background-color: var(--blue-6);
 }
-.option input:checked + .option {
+
+.checked {
   background-color: var(--blue-1);
   color: white;
   border-color: black;

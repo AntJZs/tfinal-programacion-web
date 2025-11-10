@@ -4,7 +4,6 @@ import { useState } from 'react';
 function RegistrarTweakForm() {
   const loc = useLocation();
   const navg = useNavigate();
-  const collected = loc.state;
   const [type, setType] = useState('');
   const register = () => {
     const final = {

@@ -7,7 +7,6 @@ import PassEnroll from './components/Onboarding/PassEnroll';
 import OTPEnroll from './components/Onboarding/OTPEnroll';
 import RegistrarTweakForm from './components/Onboarding/RegistrarTweakForm';
 import Dashboard from './components/Dashboard/Dashboard';
-import ActionInterface from './components/Dashboard/ActionInterface';
 import Details from './components/Dashboard/Details';
 import BalanceHistory from './components/Dashboard/BalanceHistory';
 import LoanHistory from './components/Dashboard/LoanHistory';

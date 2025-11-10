@@ -5,6 +5,7 @@ import DateFormatter from './global/DateFormatter';
 
 function BalanceHistory() {
   const hash = localStorage.getItem('hash');
+  const ID = localStorage.getItem('userID');
   const [data, setData] = useState({});
 
   useEffect(() => {
@@ -22,7 +23,6 @@ function BalanceHistory() {
       console.log(err);
     }
   }, [hash]);
-  console.log(data);
   return (
     <>
       <h2>Transferencias</h2>
@@ -34,10 +34,20 @@ function BalanceHistory() {
             .reverse()
             .map((el) => (
               <div className='account-card'>
-                <p>{el.tipo == 0 ? `Transferencia a ${el.nombres} ${el.apellidos}` : 'Transacción'}</p>
+                <p className='bigger'>
+                  {el.tipo == 0 && el.ID_emisor == ID
+                    ? `Transferencia a ${el.n_receptor} ${el.ap_receptor}`
+                    : el.tipo == 0
+                    ? `Transferencia de ${el.n_emisor} ${el.ap_emisor}`
+                    : el.tipo == 1
+                    ? 'Ingresos'
+                    : 'Retiro'}
+                </p>
                 <div className='account-card-details'>
                   <p>{DateFormatter.format(Date.parse(el.timestamp))}</p>
-                  <span className='value-small'>{CurrFormatter.format(el.tipo >= 0 ? el.cantidad : -el.cantidad)}</span>
+                  <span className='value-small'>
+                    {CurrFormatter.format(el.tipo > 0 || el.ID_emisor != ID ? el.cantidad : -el.cantidad)}
+                  </span>
                 </div>
               </div>
             ))

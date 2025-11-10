@@ -13,7 +13,7 @@
   flex-direction: column;
   flex-grow: 1;
   overflow: auto;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .buttonbar {
@@ -84,4 +84,8 @@
   font-family: monospace, sans-serif;
   font-size: 1.5em;
   text-align: end;
+}
+
+.bigger {
+  font-size: 1.25em;
 }
